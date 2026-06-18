@@ -1,0 +1,25 @@
+// Popover styles — token-reuse port of onyx-ng popover.component.scss.
+// References ONLY semantic / component tokens; light/dark come from token
+// re-mapping in the active theme. Angular `:host` selectors were transformed:
+//   :host                          -> .ui-popover (root class)
+//   :host(.ui-popover--modifier) X -> .ui-popover--modifier X
+
+.ui-popover__panel {
+  max-width: var(--ui-popover-max-width);
+  padding: var(--ui-popover-padding-y) var(--ui-popover-padding-x);
+  color: var(--ui-popover-text);
+  background-color: var(--ui-popover-bg);
+  border: var(--ui-popover-border-width) solid var(--ui-popover-border);
+  border-radius: var(--ui-popover-radius);
+  box-shadow: var(--ui-popover-shadow);
+}
+
+.ui-popover__panel:focus {
+  outline: none;
+}
+
+// Backdrop covering the viewport so an outside click dismisses the popover.
+.ui-popover__backdrop {
+  position: fixed;
+  inset: 0;
+}

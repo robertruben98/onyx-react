@@ -1,0 +1,42 @@
+// Badge styles — token-reuse port of onyx-ng badge.component.scss.
+// References ONLY semantic / component tokens (CLAUDE.md §3); light/dark come
+// from token re-mapping in the active theme. Angular `:host` selectors were
+// transformed:
+//   :host                          -> .ui-badge (root class)
+//   :host(.ui-badge--modifier) X   -> .ui-badge--modifier X
+
+.ui-badge {
+  display: inline-flex;
+}
+
+.ui-badge__el {
+  display: inline-flex;
+  align-items: center;
+  padding: var(--ui-badge-padding-y) var(--ui-badge-padding-x);
+  font-size: var(--ui-badge-font-size);
+  font-weight: var(--ui-badge-font-weight);
+  line-height: 1;
+  border-radius: var(--ui-badge-radius);
+  white-space: nowrap;
+}
+
+.ui-badge--neutral .ui-badge__el {
+  background-color: var(--ui-badge-neutral-bg);
+  color: var(--ui-badge-neutral-text);
+}
+.ui-badge--info .ui-badge__el {
+  background-color: var(--ui-badge-info-bg);
+  color: var(--ui-badge-info-text);
+}
+.ui-badge--success .ui-badge__el {
+  background-color: var(--ui-badge-success-bg);
+  color: var(--ui-badge-success-text);
+}
+.ui-badge--warning .ui-badge__el {
+  background-color: var(--ui-badge-warning-bg);
+  color: var(--ui-badge-warning-text);
+}
+.ui-badge--danger .ui-badge__el {
+  background-color: var(--ui-badge-danger-bg);
+  color: var(--ui-badge-danger-text);
+}

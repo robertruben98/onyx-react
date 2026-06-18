@@ -6,4 +6,3 @@ export type {
   ButtonType,
 } from "./Button";
 export { buttonDemos } from "./button.demos";
-export type { Demo } from "./button.demos";

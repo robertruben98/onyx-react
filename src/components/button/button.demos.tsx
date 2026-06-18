@@ -1,6 +1,11 @@
 import type { ReactNode } from "react";
 import { Button } from "./Button";
 
+/**
+ * Canonical doc-harness demo descriptor. Button is the single owner of this
+ * type; other components import it from `../button` so the name is exported by
+ * exactly one module in the root barrel (avoids TS2308 ambiguity).
+ */
 export interface Demo {
   title: string;
   description?: string;

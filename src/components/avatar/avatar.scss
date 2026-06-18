@@ -1,0 +1,46 @@
+// Avatar styles — token-reuse port of onyx-ng avatar.component.scss.
+// References ONLY semantic / component tokens; light/dark come from token
+// re-mapping in the active theme. Angular `:host` selectors were transformed:
+//   :host                          -> .ui-avatar (root class)
+//   :host(.ui-avatar--modifier)    -> .ui-avatar--modifier
+
+.ui-avatar {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: var(--ui-avatar-size);
+  height: var(--ui-avatar-size);
+  border-radius: var(--ui-avatar-radius);
+  background-color: var(--ui-avatar-bg);
+  color: var(--ui-avatar-text);
+  font-size: var(--ui-avatar-font-size);
+  font-weight: var(--ui-avatar-font-weight);
+  overflow: hidden;
+  user-select: none;
+}
+
+.ui-avatar--sm {
+  width: var(--ui-avatar-size-sm);
+  height: var(--ui-avatar-size-sm);
+  font-size: var(--ui-avatar-font-size-sm);
+}
+
+.ui-avatar--lg {
+  width: var(--ui-avatar-size-lg);
+  height: var(--ui-avatar-size-lg);
+  font-size: var(--ui-avatar-font-size-lg);
+}
+
+.ui-avatar--square {
+  border-radius: var(--ui-avatar-radius-square);
+}
+
+.ui-avatar__img {
+  width: inherit;
+  height: inherit;
+  object-fit: cover;
+}
+
+.ui-avatar__initials {
+  line-height: 1;
+}

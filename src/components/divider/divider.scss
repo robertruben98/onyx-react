@@ -1,0 +1,37 @@
+// Divider styles — token-reuse port of onyx-ng divider.component.scss.
+// References ONLY semantic / component tokens; light/dark come from token
+// re-mapping in the active theme. Angular `:host` selectors were transformed:
+//   :host                          -> .ui-divider (root class)
+//   :host(.ui-divider--modifier)   -> .ui-divider--modifier
+
+.ui-divider {
+  display: block;
+  color: var(--ui-divider-label-color);
+}
+
+.ui-divider--horizontal:not(.ui-divider--labelled) {
+  border-top: var(--ui-divider-thickness) solid var(--ui-divider-color);
+}
+
+.ui-divider--vertical:not(.ui-divider--labelled) {
+  display: inline-block;
+  align-self: stretch;
+  min-height: 1em;
+  border-left: var(--ui-divider-thickness) solid var(--ui-divider-color);
+}
+
+.ui-divider--labelled {
+  display: flex;
+  align-items: center;
+  gap: var(--ui-divider-gap);
+}
+
+.ui-divider__line {
+  flex: 1;
+  border-top: var(--ui-divider-thickness) solid var(--ui-divider-color);
+}
+
+.ui-divider__label {
+  font-size: var(--ui-divider-label-size);
+  color: var(--ui-divider-label-color);
+}

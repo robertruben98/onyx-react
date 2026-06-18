@@ -1,0 +1,16 @@
+// Tooltip styles — token-reuse port of onyx-ng tooltip.component.scss.
+// References ONLY semantic / component tokens; light/dark come from token
+// re-mapping in the active theme. Angular `:host` selectors were transformed:
+//   :host -> .ui-tooltip (root class)
+
+.ui-tooltip {
+  display: block;
+  max-width: var(--ui-tooltip-max-width);
+  padding: var(--ui-tooltip-padding-y) var(--ui-tooltip-padding-x);
+  font-size: var(--ui-tooltip-font-size);
+  line-height: 1.4;
+  color: var(--ui-tooltip-text);
+  background-color: var(--ui-tooltip-bg);
+  border-radius: var(--ui-tooltip-radius);
+  box-shadow: var(--ui-tooltip-shadow);
+}
