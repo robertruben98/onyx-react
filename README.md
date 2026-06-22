@@ -1,5 +1,7 @@
 # Onyx UI — React
 
+[![Demo](https://img.shields.io/badge/demo-online-brightgreen)](https://robertruben98.github.io/onyx-react/)
+
 Accessible, **token-themed** React components. A React 19 port of
 [onyx-ng](https://github.com/robertruben98/onyx-ng) (Angular), sharing the exact
 same design-token CSS — re-skin the whole library for a client by swapping one
